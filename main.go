@@ -1,6 +1,7 @@
 package main
 
 import (
+	"data-fetch/backend/svc"
 	"embed"
 
 	"github.com/wailsapp/wails/v2"
@@ -12,6 +13,8 @@ import (
 var assets embed.FS
 
 func main() {
+	svc.Init()
+
 	// Create an instance of the app structure
 	app := NewApp()
 
